@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Portfolio d'Aalae Goudal, diplômé en ingénierie informatique MIAGE et en master IA pour l'économie numérique et gestion, orienté Data & BI." />
+  <title>Aalae Goudal | Portfolio Data & BI</title>
+  <link rel="preload" href="assets/aalae-hero.png" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Retour a l'accueil">Aalae<span>.</span></a>
+    <nav class="main-nav" id="mainNav" aria-label="Navigation principale">
+      <a href="#about" data-i18n="nav.profile">Profil</a>
+      <a href="#experience" data-i18n="nav.experience">Expérience</a>
+      <a href="#projects" data-i18n="nav.projects">Projets</a>
+      <a href="#skills" data-i18n="nav.skills">Compétences</a>
+      <a href="#certificates" data-i18n="nav.certificates">Certificats</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-controls">
+      <div class="language-switch" aria-label="Changer la langue">
+        <button class="lang-btn is-active" type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-panel" data-tilt>
+        <div class="hero-copy" data-reveal>
+          <h1>Bonjour, je suis <span>Aalae Goudal</span></h1>
+          <p class="role-line">
+            <span id="typewriter" aria-live="polite">Ingénieur junior Data & BI</span>
+          </p>
+          <p class="hero-text">
+            Diplômé en ingénierie informatique, filière MIAGE, et en master IA pour l'économie numérique et gestion.
+            Profil orienté Data & BI, avec un focus sur les pipelines de données, la modélisation
+            décisionnelle, la préparation des données et les tableaux de bord utiles au pilotage métier.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2h4l2 5-3 2a11 11 0 0 0 6 6l2-3 5 2Z" />
+              </svg>
+              Me contacter
+            </a>
+            <a class="btn btn-ghost" href="assets/AalaeGoudalCV.pdf" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                <path d="M14 2v6h6" />
+                <path d="M12 18v-6" />
+                <path d="m9 15 3 3 3-3" />
+              </svg>
+              Voir le CV
+            </a>
+          </div>
+          <div class="social-row" aria-label="Liens sociaux">
+            <a href="https://www.linkedin.com/in/aalae-goudal-481193240/" target="_blank" rel="noreferrer"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" />
+                <path d="M2 9h4v12H2Z" />
+                <path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+              </svg>
+            </a>
+            <a href="https://github.com/aalaeg1" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M15 22v-4a4 4 0 0 0-1-3c3 0 6-2 6-7a5 5 0 0 0-1-3 5 5 0 0 0 0-3s-1 0-3 1a12 12 0 0 0-6 0C8 2 7 2 7 2a5 5 0 0 0 0 3 5 5 0 0 0-1 3c0 5 3 7 6 7a4 4 0 0 0-1 3v4" />
+                <path d="M9 18c-4 1-4-2-6-2" />
+              </svg>
+            </a>
+            <a href="mailto:aalaegoudal8@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+                <path d="m22 6-10 7L2 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual" data-reveal>
+          <div class="portrait-frame">
+            <img src="assets/aalae-hero.png" alt="Portrait professionnel d'Aalae Goudal" />
+            <span class="scanline"></span>
+            <span class="cyan-beam"></span>
+          </div>
+          <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+          <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Aller au profil">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="section-shell profile-section" id="about">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Profil</p>
+        <h2>Profil Data & BI orienté impact métier.</h2>
+      </div>
+      <div class="profile-grid">
+        <article class="profile-copy" data-reveal>
+          <p>
+            Je travaille principalement sur la chaîne Data & BI: collecte et préparation des données, pipelines ETL,
+            structuration de data warehouse, indicateurs KPI et dashboards pour transformer les données en supports de
+            décision.
+          </p>
+          <p>
+            Mon parcours combine un diplôme d'ingénieur en informatique, filière MIAGE, et un master en intelligence
+            artificielle pour l'économie numérique et gestion, avec des expériences concrètes en industrie, BI,
+            microservices et applications internes. Je recherche une opportunité professionnelle où je peux progresser
+            sur des sujets data utiles et mesurables.
+          </p>
+        </article>
+        <div class="metrics">
+          <div class="metric-card" data-reveal>
+            <strong data-count="3">0</strong>
+            <span>expériences en entreprise</span>
+          </div>
+          <div class="metric-card" data-reveal>
+            <strong data-count="14">0</strong>
+            <span>certificats Coursera</span>
+          </div>
+          <div class="metric-card" data-reveal>
+            <strong data-count="6">+6</strong>
+            <span>projets data, IA & SI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="experience">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Expérience</p>
+        <h2>Expériences avec des livrables concrets.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item" data-reveal>
+          <time>Fév. - Août 2026</time>
+          <h3>Projet PFE — Système décisionnel intelligent pour la performance industrielle</h3>
+          <p class="company">LELMA - Groupe Mecachrome</p>
+          <p>
+            Conception et mise en place d'une solution décisionnelle intelligente pour le pilotage de la performance
+            industrielle, couvrant la collecte, la validation, l'analyse et la supervision des données de production.
+          </p>
+          <ul>
+            <li>Développement d'une plateforme web multi-UAP pour la saisie, la validation et l'analyse des données de
+              production, d'arrêts, d'objectifs et de défauts qualité.</li>
+            <li>Gestion des rôles utilisateurs et création de dashboards adaptés aux différents profils de consultation
+              et de pilotage.</li>
+            <li>Mise en place d'un pipeline Data Engineering pour nettoyer, standardiser et centraliser les données
+              issues d'Excel et Power BI dans DuckDB.</li>
+            <li>Développement d'une application Streamlit de supervision avec visualisations interactives et indicateurs
+              de suivi.</li>
+            <li>Intégration de modèles Machine Learning pour la prédiction de la production, du risque de faible
+              performance et des défauts qualité.</li>
+            <li>Maintenance, amélioration et intégration des rapports Power BI existants dans l'écosystème du projet.
+            </li>
+            <li>Technologies: Python, Django, MySQL/MariaDB, DuckDB, Power BI, DAX, Power Query, Streamlit, Plotly,
+              pandas, Airflow, Docker, scikit-learn, Groq API, HTML, CSS, JavaScript.</li>
+          </ul>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <time>Juil. - Sept. 2025</time>
+          <h3>Stage de perfectionnement</h3>
+          <p class="company">HB Development, Tétouan</p>
+          <p>
+            Développement d'une plateforme pédagogique interactive avec une architecture orientée services, intégrant
+            des
+            modules backend, frontend, authentification et déploiement conteneurisé.
+          </p>
+          <ul>
+            <li>Développement de services API avec FastAPI et intégration avec une interface web MERN.</li>
+            <li>Mise en place de l'authentification JWT, structuration des routes et documentation/test avec Postman.
+            </li>
+            <li>Conteneurisation avec Docker et utilisation de Git pour le suivi des versions.</li>
+            <li>Déploiement et expérimentation dans un environnement Proxmox, avec intégration de fonctionnalités NLP.
+            </li>
+          </ul>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <time>Juil. - Août 2024</time>
+          <h3>Stage d'initiation</h3>
+          <p class="company">Amendis, Tétouan</p>
+          <p>
+            Réalisation d'une application web interne pour organiser les informations du parc informatique et faciliter
+            le
+            suivi des équipements réseau.
+          </p>
+          <ul>
+            <li>Conception de la base MySQL pour gérer équipements, affectations et informations de suivi.</li>
+            <li>Développement des fonctionnalités CRUD avec Python Flask et interfaces Bootstrap.</li>
+            <li>Structuration des pages de consultation, ajout, modification et recherche pour simplifier le travail
+              quotidien.</li>
+            <li>Renforcement des bases en développement web, modélisation de données et gestion d'application interne.
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" id="projects">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Projets</p>
+        <h2>Des systèmes complets, de la donnée à l'interface.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card featured" data-reveal data-tilt>
+          <div class="project-top">
+            <span>Oct. - Déc. 2025</span>
+            <span>IA logicielle</span>
+          </div>
+          <h3>Jumeau cognitif pour développeurs</h3>
+          <p>
+            Assistant IA basé sur un jumeau cognitif pour l'analyse de code, l'apprentissage du style développeur,
+            la génération automatisée, le debug intelligent et la production de diagrammes UML.
+          </p>
+          <div class="tag-row">
+            <span>Next.js</span><span>FastAPI</span><span>pgvector</span><span>Tree-sitter</span><span>Ollama</span>
+          </div>
+        </article>
+        <article class="project-card" data-reveal data-tilt>
+          <div class="project-top">
+            <span>Déc. 2025</span>
+            <span>Big Data</span>
+          </div>
+          <h3>Pipeline Big Data temps réel</h3>
+          <p>Pipeline temps réel pour l'analyse des transactions e-commerce: Kafka vers Spark Streaming, Parquet et
+            Spark SQL.</p>
+          <div class="tag-row">
+            <span>Kafka</span><span>Spark</span><span>Scala</span><span>Docker</span><span>Parquet</span>
+          </div>
+        </article>
+        <article class="project-card" data-reveal data-tilt>
+          <div class="project-top">
+            <span>Oct. - Nov. 2025</span>
+            <span>Microservices</span>
+          </div>
+          <h3>Gestion commerciale J2EE</h3>
+          <p>Système de gestion des ventes, stocks et prix avec architecture microservices.</p>
+          <div class="tag-row"><span>Spring
+              Boot</span><span>JPA</span><span>JWT</span><span>REST</span><span>MySQL</span></div>
+        </article>
+        <article class="project-card" data-reveal data-tilt>
+          <div class="project-top">
+            <span>Sept. - Oct. 2025</span>
+            <span>BI</span>
+          </div>
+          <h3>Intégration de données BI</h3>
+          <p>Pipeline ETL et tableaux de bord Power BI pour l'analyse et le suivi des données.</p>
+          <div class="tag-row"><span>Power BI</span><span>SQL
+              Server</span><span>SSIS</span><span>DAX</span><span>DW</span></div>
+        </article>
+        <article class="project-card" data-reveal data-tilt>
+          <div class="project-top">
+            <span>Mars - Juin 2025</span>
+            <span>Gestion de projet IA</span>
+          </div>
+          <h3>BrighterFlow - Gestion de projet d'entreprise</h3>
+          <p>
+            Plateforme de gestion de projets d'entreprise avec affectation intelligente des tâches par IA,
+            notifications automatisées et dashboards interactifs pour suivre l'avancement.
+          </p>
+          <div class="tag-row">
+            <span>Java</span><span>Spring Boot</span><span>React.js</span><span>DeepSeek API</span><span>NLP</span>
+          </div>
+        </article>
+        <article class="project-card" data-reveal data-tilt>
+          <div class="project-top">
+            <span>Mars - Juin 2024</span>
+            <span>Application mobile</span>
+          </div>
+          <h3>InstaCat - Réseau social pour amoureux des chats</h3>
+          <p>
+            Application mobile de réseau social pour partager des photos de chats, avec groupes de discussion et
+            validation des images par détection d'objets avant publication.
+          </p>
+          <div class="tag-row">
+            <span>React
+              Native</span><span>JavaScript</span><span>Python</span><span>YOLO</span><span>Firebase</span><span>HTML</span><span>CSS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" id="skills">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Compétences</p>
+        <h2>Compétences structurées autour de la Data & BI.</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card" data-reveal>
+          <h3>Langages utiles</h3>
+          <p>Python, SQL, Java, JavaScript, C, C++</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <h3>Développement support</h3>
+          <p>Django, FastAPI, Spring Boot, Streamlit, React, APIs RESTful</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <h3>Data & BI</h3>
+          <p>Power BI, DAX, Power Query, ETL, Data Warehouse, pandas, Plotly, scikit-learn</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <h3>Bases de données</h3>
+          <p>MySQL/MariaDB, DuckDB, PostgreSQL, MongoDB, Firebase, Cassandra</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <h3>Outils & système</h3>
+          <p>Git, Docker, Airflow, Linux, Proxmox, Hadoop, Talend</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <h3>Méthodes</h3>
+          <p>SCRUM, DevOps, UML, Merise, APIs RESTful, Odoo</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell education-section" id="education">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Formation</p>
+        <h2>Parcours académique.</h2>
+      </div>
+      <div class="education-grid">
+        <article data-reveal>
+          <time>2023 - 2026</time>
+          <h3>Diplôme d'ingénieur en informatique</h3>
+          <p>Filière MIAGE, EMSI Tanger</p>
+        </article>
+        <article data-reveal>
+          <time>2024 - 2026</time>
+          <h3>Master IA pour l'économie numérique et gestion</h3>
+          <p>FSJEST, Tanger</p>
+        </article>
+        <article data-reveal>
+          <time>2020 - 2023</time>
+          <h3>Licence sciences mathématiques et applications</h3>
+          <p>Faculté des Sciences, Tétouan</p>
+        </article>
+        <article data-reveal>
+          <time>2020</time>
+          <h3>Baccalauréat Sciences Physiques</h3>
+          <p>Mention Très Bien, Lycée Charif Al Idrissi, Tétouan</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" id="certificates">
+      <div class="section-heading cert-heading" data-reveal>
+        <div>
+          <p class="eyebrow">Certificats</p>
+          <h2>Certifications et formations vérifiables.</h2>
+        </div>
+        <div class="cert-controls" data-reveal>
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 21-4-4" />
+              <circle cx="11" cy="11" r="8" />
+            </svg>
+            <input id="certificateSearch" type="search" placeholder="Rechercher" autocomplete="off" />
+          </label>
+          <div class="filter-row" aria-label="Filtres des certificats">
+            <button class="filter-btn is-active" type="button" data-filter="all">Tous</button>
+            <button class="filter-btn" type="button" data-filter="data">Données</button>
+            <button class="filter-btn" type="button" data-filter="web">Web</button>
+            <button class="filter-btn" type="button" data-filter="cloud">Cloud</button>
+          </div>
+        </div>
+      </div>
+      <div class="certificate-grid" id="certificateGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section-shell contact-section" id="contact">
+      <div class="contact-panel" data-reveal data-tilt>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Construisons quelque chose de mesurable.</h2>
+          <p>
+            Ouvert aux opportunités en Data, BI et systèmes d'information, avec un intérêt particulier pour les projets
+            où les données servent directement le pilotage métier.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:aalaegoudal8@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+              <path d="m22 6-10 7L2 6" />
+            </svg>
+            Email
+          </a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/aalae-goudal-481193240/" target="_blank"
+            rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z" />
+              <path d="M2 9h4v12H2Z" />
+              <path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/aalaeg1" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M15 22v-4a4 4 0 0 0-1-3c3 0 6-2 6-7a5 5 0 0 0-1-3 5 5 0 0 0 0-3s-1 0-3 1a12 12 0 0 0-6 0C8 2 7 2 7 2a5 5 0 0 0 0 3 5 5 0 0 0-1 3c0 5 3 7 6 7a4 4 0 0 0-1 3v4" />
+              <path d="M9 18c-4 1-4-2-6-2" />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="language-strip" data-reveal>
+        <span>Arabe · Langue maternelle</span>
+        <span>Français · Avancé</span>
+        <span>Anglais · Avancé</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Aalae Goudal</span>
+    <a href="#home">Retour en haut</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
