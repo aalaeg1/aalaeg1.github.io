@@ -289,6 +289,11 @@ const pageMeta = {
   },
 };
 
+const resumeFiles = {
+  fr: "assets/AalaeGoudalCV.pdf",
+  en: "assets/AalaeGoudalResume.pdf",
+};
+
 const attributeTranslations = {
   fr: [
     [".brand", "aria-label", "Retour à l'accueil"],
@@ -473,6 +478,13 @@ function translateStaticContent(language) {
   });
 }
 
+function updateResumeLinks(language) {
+  const file = resumeFiles[language] || resumeFiles.fr;
+  document.querySelectorAll("[data-resume-link]").forEach((link) => {
+    link.setAttribute("href", file);
+  });
+}
+
 function setLanguage(language) {
   if (!["fr", "en"].includes(language)) {
     return;
@@ -494,6 +506,7 @@ function setLanguage(language) {
   });
 
   translateStaticContent(language);
+  updateResumeLinks(language);
   renderCertificates();
   startTypewriter();
 
@@ -518,16 +531,7 @@ function getInitialLanguage() {
     return queryLanguage;
   }
 
-  try {
-    const storedLanguage = localStorage.getItem("portfolioLanguage");
-    if (["fr", "en"].includes(storedLanguage)) {
-      return storedLanguage;
-    }
-  } catch {
-    return "fr";
-  }
-
-  return "fr";
+  return "en";
 }
 
 function startReveal() {
